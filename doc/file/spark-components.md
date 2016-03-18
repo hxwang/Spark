@@ -7,6 +7,6 @@
   - then apply operations to them
 - Driver programs access Spark through a `SparkContext` object, which represents a connection to a computing cluster.
 
-<img src="./figs/components-dist.PNG" width="600" />
+<img src="../figs/components-dist.PNG" width="600" />
 
 
