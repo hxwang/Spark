@@ -85,3 +85,14 @@ aws emr create-cluster --name xx --ami-version 3.2 --instance-type m3.xlarge --i
 ```
 aws emr ssh --cluster-id j-xx --key-pair-file my-key.pem 
 ```
+
+### Copy file to Remote
+- copy to code for execute to remote
+```
+ scp -r -i ./my-key.pem xx.tgz hadoop@dns-address:~/
+```
+
+### Run code code
+```
+spark-submit --class xx --master local[2] xx.jar file-parameters.txt
+```
