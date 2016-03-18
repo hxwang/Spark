@@ -9,4 +9,12 @@
 - Users create RDDs in two ways
   - by loading an external dataset
   - or by distributing a collection of objects (e.g., a list or set) in their driver program.
-  
+
+### Example
+- Sum up value in ardd
+```
+Accumulator<Integer> accum = sc.accumulator(0);
+sc.parallelize(Arrays.asList(1, 2, 3, 4)).foreach(x -> accum.add(x));
+accum.value();
+// returns 10
+```
